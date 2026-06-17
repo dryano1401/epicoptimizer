@@ -10,7 +10,7 @@ https://dryano1401.github.io/epicoptimizer/
 
 ## What it does
 
-- Loads waits from a same-origin `queue_times_cache.json` file to avoid iPhone/Safari CORS failures.
+- Loads waits from the same-origin cache URL `https://dryano1401.github.io/epicoptimizer/queue_times_cache.json` to avoid iPhone/Safari path and CORS failures.
 - The cache is seeded from the Queue-Times Epic Universe live page and refreshed by GitHub Actions from the Queue-Times JSON API.
 - Keeps manual wait entry as a fallback.
 - Gives ride-now / skip / recheck guidance based on threshold rules.
