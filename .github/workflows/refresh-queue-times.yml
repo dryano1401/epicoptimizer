@@ -1,0 +1,56 @@
+name: Refresh Queue-Times cache
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: queue-times-cache
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+
+      - name: Fetch and validate Queue-Times data
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 5 \
+            "https://queue-times.com/parks/334/queue_times.json" \
+            -o queue_times_cache.json.tmp
+          python - <<'PY'
+          import json, datetime, pathlib
+          p = pathlib.Path("queue_times_cache.json.tmp")
+          data = json.loads(p.read_text())
+          if "lands" not in data:
+              raise SystemExit("Queue-Times response missing lands")
+          rides = [r for land in data["lands"] for r in land.get("rides", [])]
+          if len(rides) < 5:
+              raise SystemExit(f"Too few rides returned: {len(rides)}")
+          data["generated_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z")
+          data["source"] = "https://queue-times.com/parks/334/queue_times.json"
+          pathlib.Path("queue_times_cache.json").write_text(json.dumps(data, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit cache if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add queue_times_cache.json
+          if git diff --cached --quiet; then
+            echo "No wait-time changes to commit."
+          else
+            git commit -m "Refresh Queue-Times cache"
+            git push origin gh-pages
+          fi
