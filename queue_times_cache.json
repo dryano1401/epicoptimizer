@@ -9,14 +9,14 @@
           "name": "Constellation Carousel",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14690,
           "name": "Stardust Racers",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 16640,
@@ -36,7 +36,7 @@
           "name": "Curse of the Werewolf",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14698,
@@ -50,7 +50,7 @@
           "name": "Monsters Unchained: The Frankenstein Experiment",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 16644,
@@ -70,21 +70,21 @@
           "name": "Dragon Racer's Rally",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14691,
           "name": "Fyre Drill",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14695,
           "name": "Hiccup's Wing Gliders",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14685,
@@ -104,14 +104,14 @@
           "name": "Bowser Jr. Challenge",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14683,
           "name": "Mario Kart™: Bowser's Challenge",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14684,
@@ -125,7 +125,7 @@
           "name": "Mine-Cart Madness™",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14697,
@@ -139,7 +139,7 @@
           "name": "Yoshi's Adventure™",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         }
       ]
     },
@@ -152,7 +152,7 @@
           "name": "Harry Potter and the Battle at the Ministry™",
           "is_open": false,
           "wait_time": 0,
-          "last_updated": "2026-06-21T06:56:31.000Z"
+          "last_updated": "2026-06-21T10:31:32.000Z"
         },
         {
           "id": 14696,
@@ -165,6 +165,6 @@
     }
   ],
   "rides": [],
-  "generated_at": "2026-06-21T07:00:04.522668Z",
+  "generated_at": "2026-06-21T10:36:04.241568Z",
   "source": "https://queue-times.com/parks/334/queue_times.json"
 }
